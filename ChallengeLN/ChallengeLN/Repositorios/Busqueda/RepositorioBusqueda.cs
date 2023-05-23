@@ -16,7 +16,9 @@ namespace ChallengeLN.Repositorios
         public async Task<List<Contacto>> BuscarPorParametro(string parametro)
         {
             List<Contacto> contactosMatcheados = new();
-            if (int.TryParse(parametro, out int numero))
+            if (parametro.Contains("@"))
+                contactosMatcheados = await _dbContext.Contactos.Where(x => x.Email == parametro).ToListAsync();
+            else if (int.TryParse(parametro, out int numero))
                 contactosMatcheados = await _dbContext.Contactos.Where(x => x.Telefono == numero.ToString()).ToListAsync();
             else
                 contactosMatcheados = await _dbContext.Contactos.Where(x => x.Domicilio == parametro).ToListAsync();
