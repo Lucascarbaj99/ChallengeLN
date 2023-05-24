@@ -7,7 +7,7 @@ Este proyecto es una api en .net core 6 que tiene la funcionalidad de:
 - Eliminar un contacto por id (revisando la autenticación, que en el codigo fue seteada que sea "lucas")
 
 -También en otro controller se implementó buscar por parametro
-que en caso de que sea un numero, se infiere que es el telefono, sino estimo que es un domicilio compuesto por numeros y letras.
+que en caso de que contenga un arroba, supongo que es un mail, sino y posee solo numeros, se infiere que es el telefono, sino estimo que es un domicilio compuesto por numeros y letras.
 
 Para ejecutar el proyecto se debe:
 - Crear una db llamada ChallengeLN
