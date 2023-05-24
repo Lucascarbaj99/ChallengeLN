@@ -11,5 +11,5 @@ que en caso de que sea un numero, se infiere que es el telefono, sino estimo que
 
 Para ejecutar el proyecto se debe:
 - Crear una db llamada ChallengeLN
-- Correr el script de creación de base de datos que se encuentra en la raiz del repo
+- Correr el script de creación de base de datos de domicilio y de contacto que se encuentra en la raiz del repo
 
