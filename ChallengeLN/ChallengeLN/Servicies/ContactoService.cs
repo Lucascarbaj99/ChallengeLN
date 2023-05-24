@@ -13,8 +13,7 @@ namespace ChallengeLN.Servicies
         {
             _dbContext = dbContext;
         }
-
-        public async Task<Contacto> GetById(int id) => _dbContext.Contactos.Find(id);
+        public async Task<Contacto> GetById(int id) => await _dbContext.Contactos.FindAsync(id);
         public async Task Save(ContactoDTO contactoDTO)
         {
             Contacto contacto = new();

@@ -10,7 +10,6 @@ namespace ChallengeLN.Controllers
     public class ContactoController : ControllerBase
     {
         private readonly ContactoService _contactoService;
-
         public ContactoController(ContactoService contactoService)
         {
             _contactoService = contactoService;

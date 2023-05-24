@@ -12,7 +12,6 @@ namespace ChallengeLN.Repositorios
         {
             _dbContext = dbContext;
         }
-
         public async Task<List<Contacto>> BuscarPorParametro(string parametro)
         {
             List<Contacto> contactosMatcheados = new();
