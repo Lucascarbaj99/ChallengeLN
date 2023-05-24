@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F8IGeKA1zkvVvP6Uzk12gqhaV/4MwHnbRkthiZLOCJrcsMEmHHa0Wr8bUqtiA3nmbLnNAKzsws+gmxC6nxLWtQ==",
+  "dgSpecHash": "OMq/RF154r+yJkZuZDdyi99LsHxWNB3CPVYMxYqEhSyN/j4DrAMMXdbwk9V1nn6nOqIGv2DpFemN9W+bFF+2iA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas\\Source\\Repos\\LN\\ChallengeLN\\ChallengeLN\\ChallengeLN.csproj",
+  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\LN\\ChallengeLN\\ChallengeLN\\ChallengeLN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

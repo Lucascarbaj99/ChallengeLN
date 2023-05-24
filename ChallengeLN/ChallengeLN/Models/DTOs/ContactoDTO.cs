@@ -9,6 +9,6 @@
         public string? Email { get; set; }
         public string? FechaNacimiento { get; set; }
         public string? Telefono { get; set; }
-        public string? Domicilio { get; set; }
+        public Domicilio? Domicilio { get; set; }
     }
 }

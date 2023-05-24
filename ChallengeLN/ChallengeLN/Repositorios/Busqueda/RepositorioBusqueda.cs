@@ -16,11 +16,11 @@ namespace ChallengeLN.Repositorios
         {
             List<Contacto> contactosMatcheados = new();
             if (parametro.Contains("@"))
-                contactosMatcheados = await _dbContext.Contactos.Where(x => x.Email == parametro).ToListAsync();
+                contactosMatcheados = await _dbContext.Contactos.Include(x => x.Domicilio).Where(x => x.Email == parametro).ToListAsync();
             else if (int.TryParse(parametro, out int numero))
-                contactosMatcheados = await _dbContext.Contactos.Where(x => x.Telefono == numero.ToString()).ToListAsync();
+                contactosMatcheados = await _dbContext.Contactos.Include(x => x.Domicilio).Where(x => x.Telefono == numero.ToString()).ToListAsync();
             else
-                contactosMatcheados = await _dbContext.Contactos.Where(x => x.Domicilio == parametro).ToListAsync();
+                contactosMatcheados = await _dbContext.Contactos.Include(x => x.Domicilio).Where(x => x.Domicilio.Ciudad == parametro || x.Domicilio.Direccion == parametro).ToListAsync();
             return contactosMatcheados;
         }
     }

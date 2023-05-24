@@ -9,8 +9,9 @@ namespace ChallengeLN.Helpers
         {
             contacto.Id = contactoDTO.Id;
             contacto.Nombre = contactoDTO.Nombre ?? contacto.Nombre;
-            contacto.Empresa = contactoDTO.Empresa ?? contacto.Empresa;
-            contacto.Domicilio = contactoDTO.Domicilio ?? contacto.Domicilio;
+            contacto.Empresa = contactoDTO.Empresa ?? contacto.Empresa; 
+            contacto.DomicilioId = contacto.DomicilioId;
+            contacto.Domicilio = contacto.Domicilio ?? contactoDTO.Domicilio;
             contacto.Email = contactoDTO.Email ?? contacto.Email;
             contacto.FechaNacimiento = contactoDTO.FechaNacimiento is null ? contacto.FechaNacimiento : DateTime.Parse(contactoDTO.FechaNacimiento);
             contacto.Imagen = contactoDTO.Imagen ?? contacto.Imagen;

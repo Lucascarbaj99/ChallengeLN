@@ -42,7 +42,7 @@ namespace ChallengeLN.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(wrongInformation);
 
-                await _contactoService.Save(contactoDTO);
+                    await _contactoService.Save(contactoDTO);
 
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK" });
             }
@@ -61,7 +61,7 @@ namespace ChallengeLN.Controllers
                 if (contacto == null)
                     return BadRequest(contactNotFound);
 
-                await _contactoService.Update(contactoDTO);
+                await _contactoService.Update(contactoDTO, contacto);
 
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK" });
             }

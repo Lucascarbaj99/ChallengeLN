@@ -1,10 +1,11 @@
-	create table Contacto (
-		ID int IDENTITY(1,1) PRIMARY KEY,
-		Nombre varchar(50) not null DEFAULT '',
-		Empresa  varchar(100) not null DEFAULT '',
-		Imagen varchar(255) not null DEFAULT '',
-		Email varchar(100) not null DEFAULT '',
-		FechaNacimiento DateTime not null,
-		Telefono varchar(12) not null DEFAULT '',
-		Domicilio varchar(100) not null DEFAULT '',
-	);
+create table Contacto (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL DEFAULT(''),
+    Empresa VARCHAR(100) NOT NULL DEFAULT(''),
+    Imagen VARCHAR(255) NOT NULL DEFAULT(''),
+    Email VARCHAR(100) NOT NULL DEFAULT(''),
+    FechaNacimiento DATETIME NOT NULL DEFAULT(''),
+    Telefono VARCHAR(12) NOT NULL DEFAULT(''),
+    DomicilioId INT NULL,
+    CONSTRAINT FK_Contacto_Domicilio FOREIGN KEY (DomicilioId) REFERENCES Domicilio(Id)
+);	
